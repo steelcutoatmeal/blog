@@ -2,8 +2,6 @@
 title: "Iron Mine Lake"
 date: "2022-07-05"
 description: "When Nature Demands Blood"
-
-
 ---
 
 I knew it was a bad idea going into the mountains in early July. But I ignored all the wisdom my father had tried to pass onto me from his backpacking adventures as a kid with his own father. The advice was pretty simple and logical. To avoid mosquito Armageddon, wait until the first week of August before venturing into the mountains. This is because high altitude temperatures stall the Spring thaw and the subsequent drying out of the terrain. Subsequently, this delays the lifecycle of mosquitoes in the mountains by about a month or two from the lower elevation equivalent. While it might seem safe in the heat of July at a lower elevation the vampire party is at its peak in the mountains. In the context of this advice a lower elevation would be somewhere around 4,000 feet while the mountains are anywhere between 7,000 to 10,000 feet.

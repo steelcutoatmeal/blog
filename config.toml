@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://ryanbagley-blog.pages.dev/"
 languageCode = "en-us"
 title = "Ryan Bagley"
 disableKinds = ["section", "categories", "tags"]
