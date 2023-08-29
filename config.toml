@@ -1,6 +1,6 @@
 baseURL = ""
 languageCode = "en-us"
-title = "Liste"
+title = "Ryan Bagley"
 disableKinds = ["section", "categories", "tags"]
 disqusShortname = ""
 pygmentsCodeFences = false
@@ -8,7 +8,6 @@ pygmentsUseClasses = false
 paginate = 9999
 minify = true
 disableHugoGeneratorInject = true
-
 
 [taxonomies]
   tag = "tags"
@@ -29,21 +28,22 @@ disableHugoGeneratorInject = true
     disable = true
 
 [Author]
-  name = "Liste"
+  name = "Ryan Bagley"
 
 [params]
-  description = "Minimalistic Hugo blogging theme"
-  author = ""
-  copyright = ""
+  description = "Personal website and blog of Ryan Bagley"
+  author = "Ryan Bagley"
+  copyright = "Ryan Bagley"
   logo = ""
+  ShowDatesOnPosts = true
 
 [frontmatter]
   date  = [":filename", ":default"]
-  author = ""
+  author = "Ryan Bagley"
   github = ""
   facebook = ""
   og_image = ""
-  sitename = "Liste"
+  sitename = "Ryan Bagley"
   twitter = ""
 
 [permalinks]
@@ -64,7 +64,7 @@ disableHugoGeneratorInject = true
   baseName = "feed"
 
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
 
@@ -76,10 +76,10 @@ disableHugoGeneratorInject = true
     weight     = -111
 
   [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "/projects/"
-    weight     = -30
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/blog/"
+    weight     = -10
 
   [[menu.main]]
     identifier = "about"

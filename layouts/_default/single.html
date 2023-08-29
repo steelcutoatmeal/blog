@@ -6,6 +6,24 @@
 <main id="main">
   <div class="content">
     {{ partial "header.html" . }}
+    <br>
+
+      {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+      {{ with $img }}
+      {{ $tinyw := $img.Resize "500x" }}
+      {{ $largew := $img.Resize "1440x" }}
+        <img loading="eager"
+          src="
+            {{ $tinyw.RelPermalink }}"
+          srcset="
+            {{ $tinyw.RelPermalink }} 500w,
+            {{ $largew.RelPermalink }} 1440w"
+          sizes="
+            (max-width: 600px) 500px,
+            1440px"
+          alt="{{ $img.Title }}" />
+          {{ end }}
+
       {{ if eq .Type "photos" }}
       <h2>{{ .Title }}</h2>
       {{ end }}
@@ -15,9 +33,14 @@
       {{ end }}</a>
       {{ end }}
       <h2 class="post">{{ .Title }}</h2>
+      {{ if .Params.showthedate | default "true" }}
+      <time itemprop="datePublished" datetime="{{ dateFormat " 2006-01-02" .Date }}">{{ dateFormat "January 1, 2006" .Date}}
+      <br>
+        {{ end }}
       {{ .Content }}
       {{ if eq .Type "posts" }}
       {{ end }}
+      {{ partial "footer.html" . }}
       {{ if eq .Title "Projects" }}
       <ul class="list">
         {{ range where .Site.Pages.ByDate.Reverse "Section" "projects" }}
@@ -43,7 +66,8 @@
         {{ end }}
       </ul>
       {{ end }}
-  </div>
+  
+    </div>
 </main>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+    <a class="skip-link" href="#main">Skip to main</a>
+    <main id="main">
+        <div class="content">
+            {{ partial "header.html" . }}
+            {{ .Content }}
+            <section>
+                <ul reversed class="list">
+                    {{ range (where .Site.RegularPages "Section" "in" "posts").GroupByDate "2006" }}
+                    {{ range .Pages }}
+                    <li>
+                        <time>{{ .Date.Format "2006-01-02" }}</time>
+                        <a href="{{ .RelPermalink }}">  {{ .Title }}</a>
+                    </li>
+                    {{- end -}}
+                    {{ end }}
+                </ul>
+            </section>
+            {{ partial "footer.html" . }}
+        </div>
+    </main>
+</body> 
+
+</html>
+
+
