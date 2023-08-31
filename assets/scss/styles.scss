@@ -119,7 +119,7 @@ ul, ol {
 }
 
 .content {
-    max-width: 80ch;
+    max-width: 81ch;
     margin: 0 auto;
 }
 
@@ -166,7 +166,8 @@ hr {
 }
 
 img {
-    max-width: 100%;
+    //max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -176,4 +177,12 @@ a:focus, a:hover {
 }
 a.hash {
     color: #ffffff;
+}
+figcaption {
+    color: #686868;
+    font-style: italic;
+    line-height: 1.6153846154;
+    padding-top: 0.5384615385em;
+    text-align: left;
+    word-wrap: break-word;
 }

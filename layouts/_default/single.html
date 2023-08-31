@@ -10,20 +10,23 @@
 
       {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
       {{ with $img }}
-      {{ $tinyw := $img.Resize "500x" }}
+      {{ $smallw := $img.Resize "475x" }}
+      {{ $mediumw := $img.Resize "720x" }}
       {{ $largew := $img.Resize "1440x" }}
-        <img loading="eager"
-          src="
-            {{ $tinyw.RelPermalink }}"
-          srcset="
-            {{ $tinyw.RelPermalink }} 500w,
-            {{ $largew.RelPermalink }} 1440w"
-          sizes="
-            (max-width: 600px) 500px,
-            1440px"
-          alt="{{ $img.Title }}" />
-          {{ end }}
+      <img 
+          loading="eager"
+          srcset="{{ $smallw.RelPermalink }} 475w,
+                  {{ $mediumw.RelPermalink }} 720w,      
+                  {{ $largew.RelPermalink }} 1440w"
+          sizes="(max-width: 634px) 475px,
+                 (max-width: 1633px) 720px,
+                 (min-width: 1634px) 1440px"
+          src="{{ $mediumw.RelPermalink }}"
+          alt="{{ $img.Title }}" 
+          width="{{ $img.Width }}"
+          height="{{ $img.Height }}"/>
 
+      {{ end }}
       {{ if eq .Type "photos" }}
       <h2>{{ .Title }}</h2>
       {{ end }}
