@@ -34,9 +34,7 @@ Changes:
 {{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
 
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-    {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
-    {{- end }}
+        <a href="{{ $src.RelPermalink }}">
     <img
         {{ if $src }}
             sizes="(min-width: 35em) 1200px, 100vw"
@@ -63,7 +61,7 @@ Changes:
         width="{{ $src.Width }}"
         height="{{ $src.Height }}"
     /> <!-- Closing img tag -->
-    {{- if .Get "link" }}</a>{{ end -}}
+    </a>
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
             {{ with (.Get "title") -}}

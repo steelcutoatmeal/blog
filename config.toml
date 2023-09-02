@@ -13,6 +13,9 @@ disableHugoGeneratorInject = true
   tag = "tags"
   category = "categories"
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [privacy]
   [privacy.disqus]
     disable = true
@@ -31,7 +34,7 @@ disableHugoGeneratorInject = true
   name = "Ryan Bagley"
 
 [params]
-  description = "Personal website and blog of Ryan Bagley"
+  description = "The adventure blog of Ryan Bagley. Where network engineering and the outdoors collide. It might be a fun time on the internet or out in the wilderness."
   author = "Ryan Bagley"
   copyright = "Ryan Bagley"
   logo = ""
@@ -40,16 +43,14 @@ disableHugoGeneratorInject = true
 [frontmatter]
   date  = [":filename", ":default"]
   author = "Ryan Bagley"
-  github = ""
-  facebook = ""
-  og_image = ""
   sitename = "Ryan Bagley"
-  twitter = ""
+  description = ""
+  image = ""
 
 [permalinks]
-  posts = "/:year/:month/:day/:filename"
+  posts = "/:filename"
   pages = "/:slug"
-  photos = "/:year/:month/:day/:filename"
+  photos = "/:filename"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

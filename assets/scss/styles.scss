@@ -4,7 +4,7 @@
 }
 
 body {
-    font: 1rem/1.5 -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    font: 20px -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -14,7 +14,7 @@ body {
 }
 
 footer {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
 }
 
 .skip-link {
@@ -31,12 +31,12 @@ footer {
 
 h1, h2, h3, h4, h5, strong, b {
     font-size: inherit;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 header {
     line-height: 2;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
@@ -66,6 +66,8 @@ blockquote {
 a,
 a:visited {
     color: inherit;
+    text-underline-offset: 0.2rem;
+    //color: #ff0008;
 }
 
 pre {
@@ -77,8 +79,7 @@ pre {
 
 code, pre {
     font-family: San Francisco Mono, Monaco, "Consolas", "Lucida Console","DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
-    font-size: normal;
-    font-size: small;
+    font-size: inherit;
     background: #eee
 }
 
@@ -119,7 +120,7 @@ ul, ol {
 }
 
 .content {
-    max-width: 81ch;
+    max-width: 60ch;
     margin: 0 auto;
 }
 
@@ -166,23 +167,37 @@ hr {
 }
 
 img {
-    //max-width: 100%;
     width: 100%;
     height: auto;
 }
 
 a:focus, a:hover {
-    background-color: #353535;
+    background-color: #000000;
     color: #ffffff;
 }
 a.hash {
     color: #ffffff;
 }
+figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
 figcaption {
     color: #686868;
     font-style: italic;
-    line-height: 1.6153846154;
-    padding-top: 0.5384615385em;
-    text-align: left;
+    margin-top: -1.2rem;
+    padding-top: 0;
+    text-align: center;
     word-wrap: break-word;
+    font-size: 0.9rem;
+    line-height: 100%;
+}
+
+@media (max-width: 534px) {
+    * {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
 }

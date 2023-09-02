@@ -1,6 +1,6 @@
 ---
 title: "Garage Innovators"
-date: "2022-12-13"
+date: "2022-11-12"
 description: "Small Businesses that Make Custom 5th Gen 4Runner Products - Mad Scientists or Trailer Blazers? How they Turned their Ideas into Reality"
 ---
 
